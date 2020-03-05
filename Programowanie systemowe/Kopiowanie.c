@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <string.h>
-#define BUF_SIZE 1024
+#define BUF_SIZE 1024 //pliki naglowkowe
 
 int main(int argc, char *argv[])
 {
 	int input_fd, output_fd;
-	ssize_t ret_in, ret_out;
+	ssize_t, ret_in, ret_out;
 	char buffer[BUF_SIZE];
 	
 	if(argc !=3)
 	{
-		printf("Usage: %s file_orgin file_destination\n", argv[0];
+		printf("Usage: %s file_orgin file_destination\n", argv[0]);
 		return 1;
 	}
 	input_fd = open(argv[1], O_RDONLY);
